@@ -1,0 +1,104 @@
+body {
+  background: linear-gradient(to right, #19baeb, #fadd66);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: darkblue;
+  text-align: center;
+}
+
+.box {
+  width: 100px;
+  height: 50px;
+  background-color: black;
+  color:transparent;
+  position: absolute;
+  top: 25px;
+  right: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+   resize: both;                /* Enable resizing */
+  overflow: auto;             /* Scrollbars if content exceeds box */
+  max-height: 100px;
+  min-height: 50px;
+  max-width: 150px;
+  min-width: 90px;
+  border-radius: 5px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+.box:hover {
+  color: white;
+}
+
+#spider {
+  position: absolute;
+  width: 60px;
+  display: none;
+  z-index: 10;
+}
+
+.footprint {
+  position: absolute;
+  width: 5px;
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.4;
+  border-radius: 50%;
+  transition: opacity 1s ease-out;
+}
+
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+}
+.glow-button {
+  background-color: #111;
+  color: #00ffff;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  margin: 20px auto 0 auto;
+  align-items: center;
+  justify-content: center;
+
+  border: 3px solid #00ffff;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 0 5px #00ffff, 0 0 15px #00ffff;
+  transition: 0.3s ease;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.glow-button:hover {
+  box-shadow: 0 0 10px #00ffff, 0 0 25px #00ffff, 0 0 50px #00ffff;
+  background-color: #00ffff;
+  color: #111;
+  transform: scale(1.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.glow-button:active {
+  box-shadow: 0 0 5px #00ffff, 0 0 15px #00ffff;
+  background-color: #00ffff;
+  color: #111;
+}
+/* Flexbox se center karne ke liye */
+/* filepath: c:\Users\Asus\OneDrive\Desktop\my-website\style.css */
+.center-flex {
+  display: flex;
+  flex-direction: column; /* Agar vertical alignment chahiye */
+  justify-content: center;
+  align-items: center; /* Agar vertical bhi center karna ho */
+}
